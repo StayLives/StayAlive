@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Player2DExample : MonoBehaviour 
+public class PlayerMoveJoystick : MonoBehaviour 
 {
     public float moveSpeed = 8f;
     public Joystick joystick;
@@ -11,7 +11,7 @@ public class Player2DExample : MonoBehaviour
 
         if (moveVector != Vector3.zero)
         { 
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, moveVector);
+            //transform.rotation = Quaternion.LookRotation(Vector3.forward, moveVector);
             transform.Translate(moveVector * moveSpeed * Time.deltaTime, Space.World);
         }
     }
